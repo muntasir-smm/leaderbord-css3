@@ -5,6 +5,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     background-color: #f3f1ff;
+    margin: 0px;
 }
 
 main {
@@ -12,6 +13,7 @@ main {
     gap: 20px;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 36px;
 }
 
 .container {
@@ -24,6 +26,46 @@ main {
 hr {
     border: 1px solid #D1D1D1;
     margin-bottom: 27px;
+}
+/* Navigation Styles */
+nav{
+    width: 100%;
+    background-color: black;
+    color: #FFFFFF;
+    margin: 0px 0px 36px 0px;
+    padding: 0px 10px 0px 10px;
+}
+
+.nav-items, .logo, .menu, .menu-items{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo, .menu{
+    gap: 10px;
+}
+.menu, .menu-items{
+    gap: 10px;
+    list-style: none;
+}
+.nav-items{
+    justify-content: space-evenly;
+}
+
+.text-g{
+    color: #00ff00;
+}
+.text-r{
+    color: #ff0000;
+}
+.text-b{
+    color: #00aaff;
+}
+
+.profile,.logo-pic{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
 /* Top players styles */
@@ -102,8 +144,9 @@ hr {
     text-align: center;
 }
 .course{
-    border: 1px solid red;
     border-radius: 10px;
+    background-color: #FFFFFF;
+    /* filter: drop-shadow(0px 5px 13px rgba(0, 0, 0, 0.09)); */
 }
 .course .course-banner img{
     width: 224px;
@@ -129,6 +172,30 @@ hr {
 
 /* Mobile Device */
 @media only screen and (max-width: 688px) {
+    nav{
+        width: 100%;
+    }
+    .nav-title{
+        font-size: 22px;
+    }
+    
+    .nav-items{
+        gap: 0px;
+        /* justify-content: center; */
+        padding: 0px 20px 0px 20px;
+    }
+    menu{
+        margin: 0px;
+        padding: 0px;
+    }
+    .menu-items{
+        flex-direction: column;
+        gap: 0px;
+    }
+    .menu-items li{
+        font-size: 14px;
+    }
+
     .container{
         width: 100%;
     }
@@ -145,9 +212,7 @@ hr {
         display: grid;
         text-align: center;
     }
-    .blog, .course{
-        border: 1px solid red;
-    }
+    
     .blogs, .courses{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -156,6 +221,9 @@ hr {
 /* Tablet Devices */
 
 @media only screen and (min-width: 689px) and (max-width: 992px) {
+    nav{
+        width: 100%;
+    }
     .container{
         width: 100%;
     }
